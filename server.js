@@ -23,10 +23,10 @@ app.disable('x-powered-by')
 app.disable('etag')
 
 app.get('/listen/:videoID', async (req, res) => {
-
     try {
 
         let musicStream = ytdl(req.params.videoID, { filter: 'audioonly' })
+        res.status(200)
         res.set('Content-Type', 'audio/ogg')
         musicStream.pipe(res)
 
@@ -36,6 +36,9 @@ app.get('/listen/:videoID', async (req, res) => {
         })
     }
 })
+
+app.get('*', (req, res) => res.sendStatus(404))
+app.post('*', (req, res) => res.sendStatus(404))
 
 app.listen(process.env.PORT, () => {
     console.log(`Running on port ${process.env.PORT}`)
