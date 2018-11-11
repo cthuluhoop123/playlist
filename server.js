@@ -1,3 +1,9 @@
+require('dotenv').config()
+
+const fs = require('fs')
+
+const ytdl = require('ytdl-core')
+
 const express = require('express')
 const app = express()
 
@@ -15,3 +21,22 @@ app.use(helmet())
 
 app.disable('x-powered-by')
 app.disable('etag')
+
+app.get('/listen/:videoID', async (req, res) => {
+
+    try {
+
+        let musicStream = ytdl(req.params.videoID, { filter: 'audioonly' })
+        res.set('Content-Type', 'audio/ogg')
+        musicStream.pipe(res)
+
+    } catch (e) {
+        res.json({
+            error: 'An error has occured...'
+        })
+    }
+})
+
+app.listen(process.env.PORT, () => {
+    console.log(`Running on port ${process.env.PORT}`)
+})
