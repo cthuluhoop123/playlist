@@ -1,0 +1,36 @@
+
+.title {
+    text-align: left;
+}
+
+.editContent {
+    max-width: 60rem;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.ant-list-bordered {
+    background: #f3f3f3 !important;
+}
+
+.wrapper {
+    margin: 1rem;
+}
+
+.localStorage {
+    margin-top: 3rem;
+    margin-bottom: .3rem;
+    max-width: 40rem;;
+}
+
+.currentLocalStorage {
+    background: #ECECEC;
+    padding: 30px;
+}

@@ -1,0 +1,48 @@
+.search {
+    max-width: 25rem;
+}
+
+.content {
+    max-width: 60rem;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+    display: block;
+    margin: 0 1rem;
+}
+
+.error {
+    color: red;
+}
+
+.loader {
+    margin: .2rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+.songItem {
+    margin: 1rem;
+}
+
+.addSong {
+    margin: .2rem;
+}
+
+.aplayer { 
+    background: #f3f3f3 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.edit {
+    text-align: right !important;
+    margin: .2rem auto;
+}
+
+.center {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
